@@ -9,7 +9,8 @@ buttonColor.addEventListener('click', () => {
     .toString(16)
     .padStart(6, 0)}`;
 }
-  spanColor.textContent = getRandomHexColor();
-  bodyColor.style.backgroundColor = getRandomHexColor();
+  const color = getRandomHexColor();
+  spanColor.textContent = color;
+  bodyColor.style.backgroundColor = color;
 });
 

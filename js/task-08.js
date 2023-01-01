@@ -4,14 +4,14 @@ const form = document.querySelector("form.login-form");
 form.addEventListener("submit", handleSubmit);
 
 function handleSubmit(event) {
-    event.preventDefault();
-    const {
-    elements: { email, password }
-  } = event.currentTarget;
-
+  event.preventDefault();
+  const email = event.currentTarget.elements.email.value;
+  const password = event.currentTarget.elements.password.value;
+ 
   if (email.value === "" || password.value === "") {
     return alert("Please fill in all the fields!");
   }
-    console.log(`Login: ${email.value}, Password: ${password.value}`);
+  const formData = { email, password };  
+  console.log(formData);
   event.currentTarget.reset();
 }
